@@ -1,11 +1,12 @@
-import React, { Component } from 'react';
-import axios from 'axios';
+import React, { Component } from "react";
+import axios from "axios";
+import MovieCard from "./MovieCard";
 
 export default class Movie extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      movie: null
+      movie: null,
     };
   }
 
@@ -32,10 +33,10 @@ export default class Movie extends Component {
   //   }
   // }
 
-  saveMovie = () => {
-    const addToSavedList = this.props.addToSavedList;
-    addToSavedList(this.state.movie);
-  };
+  // saveMovie = () => {
+  //   const addToSavedList = this.props.addToSavedList;
+  //   addToSavedList(this.state.movie)
+  // }
 
   render() {
     if (!this.state.movie) {
